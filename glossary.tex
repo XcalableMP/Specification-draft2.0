@@ -1,0 +1,48 @@
+\newcommand{\namelistlabel}[1]{\mbox{#1}\hfil}
+\newenvironment{namelist}[1]{%
+\begin{list}{}
+       {\let\makelabel\namelistlabel
+        \settowidth{\labelwidth}{#1}
+        \setlength{\leftmargin}{1.3\labelwidth}
+}
+}{%
+\end{list}}
+
+\newcommand{\gitem}[1]{\item[{\parbox[b]{3.3cm}{\raggedleft \bf \Term{#1}}}]}
+
+
+\section{Glossary}\label{sec:glossary}
+
+\subsection{Node Terminology}
+
+\begin{namelist}{entire node setxxxx}
+
+\gitem{node}
+
+  A logical entity managed by the XcalableMP runtime system, which has
+  its own local memory and can communicate with each other, and on which
+  one or more threads can execute.
+
+\end{namelist}
+
+\subsection{Thread Terminology}
+
+\begin{namelist}{entire node setxxxx}
+
+\gitem{thread}
+
+  An execution entity managed by the XcalableMP runtime system.
+
+\end{namelist}
+
+\subsection{Tasklet Terminology}
+
+\begin{namelist}{entire node setxxxx}
+
+\gitem{tasklet}
+
+  A specific instance of executable code and its data environment,
+  generated when a thread encounters a tasklet or taskletloop
+  construct.
+
+\end{namelist}
